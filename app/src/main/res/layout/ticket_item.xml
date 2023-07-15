@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:layout_margin="4dp"
+    android:elevation="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/app_logo_ticket"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="6dp"
+            android:src="@drawable/app_logo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Name_Of_Artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:textSize="24sp"
+            android:text ="Artist's Name                                 "
+            android:textStyle="bold" />
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/City_OUTPUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/Name_Of_Artist"
+            android:gravity=""
+            android:text="City"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Date_OUTPUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/City_OUTPUT"
+            android:gravity=""
+            android:text="Date"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/Price_OUTPUT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/Date_OUTPUT"
+            android:gravity=""
+            android:text="Price"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

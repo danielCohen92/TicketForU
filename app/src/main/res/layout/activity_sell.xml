@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SellActivity">
+
+    <LinearLayout
+        android:id="@+id/menu_LOGO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/menu_IMG_LOGO"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="-10dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:src="@drawable/app_logo" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/sellTicket_TXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menu_LOGO"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/cardview_default_radius"
+        android:layout_marginTop="5dp"
+        android:fontFamily="serif-monospace"
+        android:text="Sell Ticket" />
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/nameOfArtist_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert Name of artist"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/sellTicket_TXT"
+        />
+
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/City_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert City"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/nameOfArtist_INPUT"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Date_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert Date "
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/City_INPUT"
+        />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/PhoneNumber_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert phone number "
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/Date_INPUT"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/numOfRow_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert number of ROW "
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/PhoneNumber_INPUT"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/Price_INPUT"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:hint="Insert Price "
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/numOfRow_INPUT"
+        />
+
+
+
+    <RadioGroup
+        android:id="@+id/radio_Group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Price_INPUT"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/radio_StandUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stand-up"
+
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/radio_MusicShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton
+            android:id="@+id/radio_TheaterShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theater"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ButtonsPublishAndBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/radio_Group"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/PublishMyTicket_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_Group"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_border"
+            android:elevation="10dp"
+            android:fontFamily="serif-monospace"
+            android:text="Publish my ticket"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/purple_700"></com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BackToMenu_BTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PublishMyTicket_BTN"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_border"
+            android:elevation="10dp"
+            android:fontFamily="serif-monospace"
+            android:text="Back to menu"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/purple_700"></com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
